@@ -1,0 +1,750 @@
+body {
+  max-width: 64%;
+  overflow-x: hidden;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 22px;
+  left: 18px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #ffffff;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 175px;
+  margin: -110px 0 0 -50px;
+  height: 133.5vh;
+  padding: 45px;
+  padding-top: 150px;
+  background: #000000;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+
+
+#menu li
+{
+  padding: 16px ;
+  font-size: 14px;
+}
+
+#menu a {
+  display: block; /* Membuat seluruh area li dapat diklik */
+  color: #ffffff; /* Warna teks */
+  text-decoration: none; /* Menghapus garis bawah */
+  transition: background-color 0.3s ease; /* Transisi untuk hover */
+}
+
+#menu a:hover {
+  background-color: #575757; /* Warna background saat di-hover */
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+.mobile.main {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  overflow: hidden;
+}
+.mobile .section1 {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  height: 3027px;
+  min-height: 3027px;
+}
+.mobile .cover {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 2227px;
+  left: 0px;
+  width: 360px;
+  height: 800px;
+}
+.mobile .image {
+  position: absolute;
+  top: 14px;
+  right: 305px;
+  bottom: 2976px;
+  left: 306px;
+  width: 36px;
+  height: 36px;
+}
+.mobile .info {
+  position: absolute;
+  top: 25px;
+  right: 253px;
+  bottom: 2984px;
+  left: 71px;
+  width: 36px;
+  height: 18px;
+  font: 500 12px/1.5 "Poppins", Helvetica, Arial, serif;
+  color: white;
+}
+.mobile .info1 {
+  position: absolute;
+  top: 25px;
+  right: 196px;
+  bottom: 2984px;
+  left: 127px;
+  width: 37px;
+  height: 18px;
+  font: 500 12px/1.5 "Poppins", Helvetica, Arial, serif;
+  color: white;
+}
+.mobile .info2 {
+  position: absolute;
+  top: 25px;
+  right: 125px;
+  bottom: 2984px;
+  left: 184px;
+  width: 51px;
+  height: 18px;
+  font: 500 12px/1.5 "Poppins", Helvetica, Arial, serif;
+  color: white;
+}
+.mobile .box {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  bottom: 2974px;
+  left: 265px;
+  display: flex;
+  flex-direction: column;
+  width: 85px;
+  height: 38px;
+  outline: 1px solid white;
+  outline-offset: -1px;
+}
+.mobile .info3 {
+  margin: 10px 20px;
+  width: 45px;
+  height: 18px;
+  font: 500 12px/1.5 "Poppins", Helvetica, Arial, serif;
+  color: white;
+}
+.mobile .hero_title {
+  position: absolute;
+  top: 315px;
+  right: 28px;
+  bottom: 2608px;
+  left: 26px;
+  width: 306px;
+  height: 104px;
+  font: 700 39px/1.33 "Playfair Display", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0.2px;
+}
+.mobile .text {
+  position: absolute;
+  top: 420px;
+  right: 71px;
+  bottom: 2586px;
+  left: 30px;
+  width: 259px;
+  height: 21px;
+  font: 600 14px/1.5 "Poppins", Helvetica, Arial, serif;
+  color: rgba(255, 255, 255, 0.498);
+  letter-spacing: 0.3px;
+}
+.mobile .rect {
+  position: absolute;
+  top: 750px;
+  right: 0px;
+  bottom: 2227px;
+  left: 0px;
+  width: 360px;
+  height: 50px;
+  background-color: black;
+}
+.mobile .image1 {
+  position: absolute;
+  top: 768px;
+  right: 190px;
+  bottom: 2244px;
+  left: 105px;
+  width: 65px;
+  height: 15px;
+}
+.mobile .image2 {
+  position: absolute;
+  top: 768px;
+  right: 106px;
+  bottom: 2246px;
+  left: 189px;
+  width: 65px;
+  height: 13px;
+}
+.mobile .image3 {
+  position: absolute;
+  top: 769px;
+  right: 20px;
+  bottom: 2246px;
+  left: 275px;
+  width: 65px;
+  height: 12px;
+}
+.mobile .image4 {
+  position: absolute;
+  top: 765px;
+  right: 275px;
+  bottom: 2246px;
+  left: 20px;
+  width: 65px;
+  height: 16px;
+}
+.mobile .cover1 {
+  position: absolute;
+  top: 795px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 360px;
+  height: 2232px;
+}
+.mobile .title {
+  position: absolute;
+  top: 1160px;
+  right: 19px;
+  bottom: 1813px;
+  left: 87px;
+  width: 254px;
+  height: 54px;
+  font: 700 30px/1.79 "Playfair Display", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0.3px;
+}
+.mobile .title1 {
+  position: absolute;
+  top: 1610px;
+  right: 62px;
+  bottom: 1366px;
+  left: 60px;
+  width: 238px;
+  height: 51px;
+  font: 700 28px/1.79 "Playfair Display", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0.3px;
+}
+.mobile .paragraph {
+  position: absolute;
+  top: 1215px;
+  right: 28px;
+  bottom: 1484px;
+  left: 27px;
+  width: 305px;
+  height: 328px;
+  font: 500 14px/1.79 "Poppins", Helvetica, Arial, serif;
+  color: rgba(255, 255, 255, 0.498);
+  text-align: justify;
+  letter-spacing: 0.3px;
+}
+.mobile .paragraph1 {
+  position: absolute;
+  top: 1660px;
+  right: 28px;
+  bottom: 838px;
+  left: 32px;
+  width: 300px;
+  height: 529px;
+  font: 500 14px/1.79 "Poppins", Helvetica, Arial, serif;
+  color: rgba(255, 255, 255, 0.498);
+  text-align: justify;
+  letter-spacing: 0.3px;
+}
+.mobile .rect1 {
+  position: absolute;
+  top: 2220px;
+  right: 58px;
+  bottom: 717px;
+  left: 31px;
+  width: 271px;
+  height: 90px;
+  background-color: rgba(255, 255, 255, 0.498);
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: 0px 10px 4px 0px rgba(0, 0, 0, 0.247);
+}
+.mobile .info11 {
+  position: absolute;
+  top: 2263px;
+  right: 178px;
+  bottom: 746px;
+  left: 118px;
+  width: 64px;
+  height: 18px;
+  font: 500 12px/1.5 "Poppins", Helvetica, Arial, serif;
+  color: rgba(0, 0, 0, 0.498);
+  letter-spacing: 0.3px;
+}
+.mobile .highlight {
+  position: absolute;
+  top: 2241px;
+  right: 58px;
+  bottom: 765px;
+  left: 118px;
+  width: 184px;
+  height: 21px;
+  font: 700 16px/1.31 "Playfair Display", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0.3px;
+}
+.mobile .image5 {
+  position: absolute;
+  top: 2234px;
+  right: 252px;
+  bottom: 730px;
+  left: 47px;
+  width: 61px;
+  height: 63px;
+  border-radius: 30.5px 30.5px 30.5px 30.5px;
+}
+.mobile .image6 {
+  position: absolute;
+  top: 2240px;
+  right: 258px;
+  bottom: 737px;
+  left: 52px;
+  width: 50px;
+  height: 50px;
+}
+.mobile .rect3 {
+  position: absolute;
+  top: 2345px;
+  right: 58px;
+  bottom: 592px;
+  left: 31px;
+  width: 271px;
+  height: 90px;
+  background-color: #aab5c2;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: 0px 10px 4px 0px rgba(0, 0, 0, 0.247);
+}
+.mobile .image51 {
+  position: absolute;
+  top: 2358px;
+  right: 243px;
+  bottom: 606px;
+  left: 56px;
+  width: 61px;
+  height: 63px;
+  border-radius: 30.5px 30.5px 30.5px 30.5px;
+}
+.mobile .image7 {
+  position: absolute;
+  top: 2370px;
+  right: 248px;
+  bottom: 617px;
+  left: 62px;
+  width: 50px;
+  height: 40px;
+}
+.mobile .info12 {
+  position: absolute;
+  top: 2391px;
+  right: 162px;
+  bottom: 618px;
+  left: 134px;
+  width: 64px;
+  height: 18px;
+  font: 500 12px/1.5 "Poppins", Helvetica, Arial, serif;
+  color: rgba(0, 0, 0, 0.498);
+  letter-spacing: 0.3px;
+}
+.mobile .highlight1 {
+  position: absolute;
+  top: 2371px;
+  right: 111px;
+  bottom: 635px;
+  left: 131px;
+  width: 118px;
+  height: 21px;
+  font: 700 16px/1.31 "Playfair Display", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0.3px;
+}
+.mobile .big_title {
+  position: absolute;
+  top: 2570px;
+  right: 253px;
+  bottom: 410px;
+  left: 46px;
+  display: flex;
+  justify-content: center;
+  width: 61px;
+  height: 47px;
+  font: 400 35px/1.34 "Playfair Display", Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+}
+.mobile .rect11 {
+  position: absolute;
+  top: 2470px;
+  right: 58px;
+  bottom: 467px;
+  left: 31px;
+  width: 271px;
+  height: 90px;
+  background-color: rgba(255, 255, 255, 0.498);
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: 0px 10px 4px 0px rgba(0, 0, 0, 0.247);
+}
+.mobile .info13 {
+  position: absolute;
+  top: 2511px;
+  right: 154px;
+  bottom: 498px;
+  left: 143px;
+  width: 63px;
+  height: 18px;
+  font: 500 12px/1.5 "Poppins", Helvetica, Arial, serif;
+  color: rgba(0, 0, 0, 0.498);
+  letter-spacing: 0.3px;
+  opacity: 0.69;
+}
+.mobile .highlight2 {
+  position: absolute;
+  top: 2491px;
+  right: 137px;
+  bottom: 515px;
+  left: 143px;
+  width: 80px;
+  height: 21px;
+  font: 700 16px/1.31 "Playfair Display", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0.3px;
+}
+.mobile .line {
+  position: absolute;
+  top: 2684px;
+  right: 33px;
+  bottom: 342px;
+  left: 27px;
+  width: auto;
+  height: 1px;
+  background-color: white;
+}
+.mobile .text1 {
+  position: absolute;
+  top: 2617px;
+  right: 58.5px;
+  bottom: 389px;
+  left: 199.5px;
+  display: flex;
+  justify-content: center;
+  width: 102px;
+  height: 21px;
+  font: 700 14px/1.5 "Poppins", Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+}
+.mobile .info21_box {
+  position: absolute;
+  top: 2955px;
+  right: 78.5px;
+  bottom: 50px;
+  left: 77.5px;
+  display: flex;
+  justify-content: center;
+  width: 204px;
+  height: 22px;
+}
+.mobile .info21 {
+  font: 500 12px/1.79 "Poppins", Helvetica, Arial, serif;
+  color: black;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+.mobile .info21_span0 {
+  font: 500 1em/1.79 "Poppins", Helvetica, Arial, serif;
+  color: rgba(255, 255, 255, 0.498);
+}
+.mobile .info21_span1 {
+  font: 700 1em/1.79 "Poppins", Helvetica, Arial, serif;
+  color: white;
+}
+.mobile .info21_span2 {
+  font: 500 1em/1.79 "Poppins", Helvetica, Arial, serif;
+  color: rgba(255, 255, 255, 0.498);
+}
+.mobile .title2 {
+  position: absolute;
+  top: 2715px;
+  right: 38px;
+  bottom: 275px;
+  left: 25px;
+  display: flex;
+  justify-content: center;
+  width: 297px;
+  height: 37px;
+  font: 400 28px/1.32 "Playfair Display", Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+}
+.mobile .text11 {
+  position: absolute;
+  top: 2617px;
+  right: 189px;
+  bottom: 389px;
+  left: 37px;
+  display: flex;
+  justify-content: center;
+  width: 134px;
+  height: 21px;
+  font: 700 14px/1.5 "Poppins", Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+}
+.mobile .big_title1 {
+  position: absolute;
+  top: 2570px;
+  right: 91.5px;
+  bottom: 410px;
+  left: 195.5px;
+  display: flex;
+  justify-content: center;
+  width: 73px;
+  height: 47px;
+  font: 400 35px/1.34 "Playfair Display", Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+}
+.mobile .image52 {
+  position: absolute;
+  top: 2484px;
+  right: 234px;
+  bottom: 480px;
+  left: 65px;
+  width: 61px;
+  height: 63px;
+  border-radius: 30.5px 30.5px 30.5px 30.5px;
+}
+.mobile .image71 {
+  position: absolute;
+  top: 2495px;
+  right: 239px;
+  bottom: 492px;
+  left: 71px;
+  width: 50px;
+  height: 40px;
+}
+.mobile .rect4 {
+  position: absolute;
+  top: 2869px;
+  right: 291px;
+  bottom: 113px;
+  left: 24px;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.498);
+  border-radius: 22.5px 22.5px 22.5px 22.5px;
+}
+.mobile .image8 {
+  position: absolute;
+  top: 2881px;
+  right: 301px;
+  bottom: 125px;
+  left: 34px;
+  width: 25px;
+  height: 21px;
+}
+.mobile .rect41 {
+  position: absolute;
+  top: 2869px;
+  right: 206px;
+  bottom: 113px;
+  left: 109px;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.498);
+  border-radius: 22.5px 22.5px 22.5px 22.5px;
+}
+.mobile .image9 {
+  position: absolute;
+  top: 2879px;
+  right: 218px;
+  bottom: 126px;
+  left: 120px;
+  width: 22px;
+  height: 22px;
+}
+.mobile .rect42 {
+  position: absolute;
+  top: 2869px;
+  right: 121px;
+  bottom: 113px;
+  left: 194px;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.498);
+  border-radius: 22.5px 22.5px 22.5px 22.5px;
+}
+.mobile .image10 {
+  position: absolute;
+  top: 2879px;
+  right: 132px;
+  bottom: 123px;
+  left: 204px;
+  width: 24px;
+  height: 25px;
+}
+.mobile .rect43 {
+  position: absolute;
+  top: 2869px;
+  right: 36px;
+  bottom: 113px;
+  left: 279px;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.498);
+  border-radius: 22.5px 22.5px 22.5px 22.5px;
+}
+.mobile .image11 {
+  position: absolute;
+  top: 2882px;
+  right: 47px;
+  bottom: 126px;
+  left: 289px;
+  width: 24px;
+  height: 19px;
+}
+.mobile .box1 {
+  position: absolute;
+  top: 2765px;
+  right: 121px;
+  bottom: 220px;
+  left: 108px;
+  display: flex;
+  flex-direction: column;
+  width: 131px;
+  height: 42px;
+  min-height: 42px;
+  outline: 1px solid white;
+  outline-offset: -1px;
+  filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.247));
+}
+.mobile .image12 {
+  position: absolute;
+  top: 12px;
+  right: 94px;
+  bottom: 12px;
+  left: 17px;
+  width: 20px;
+  height: 18px;
+}
+.mobile .text2 {
+  position: absolute;
+  top: 11px;
+  right: 17px;
+  bottom: 10px;
+  left: 47px;
+  display: flex;
+  justify-content: center;
+  width: 67px;
+  height: 21px;
+  font: 500 14px/1.5 "Poppins", Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+}
+.mobile .line1 {
+  position: absolute;
+  top: 1580px;
+  right: 33px;
+  bottom: 1446px;
+  left: 27px;
+  width: auto;
+  height: 1px;
+  background-color: white;
+}
+.mobile .rect8 {
+  position: absolute;
+  top: 840px;
+  right: 75px;
+  bottom: 1885px;
+  left: 75px;
+  width: 210px;
+  height: 302px;
+  background-color: #c4c4c4;
+  border-radius: 0px 105px 105px 105px;
+}
+.mobile .image13 {
+  position: absolute;
+  top: 840px;
+  right: 75px;
+  bottom: 1885px;
+  left: 75px;
+  width: 210px;
+  height: 302px;
+}
